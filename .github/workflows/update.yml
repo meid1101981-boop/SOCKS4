@@ -29,4 +29,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add all.txt
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update SOCKS4 proxy list" && git push)
+          git commit -m "Update SOCKS4 proxy list" || exit 0
+          git push
